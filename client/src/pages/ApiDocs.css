@@ -1,0 +1,114 @@
+.api-docs {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.api-docs h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  background: linear-gradient(45deg, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.api-section {
+  margin-bottom: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.api-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.endpoint {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.endpoint h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.method {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 4px;
+  font-weight: bold;
+  margin-right: 1rem;
+  background: #6366f1;
+  color: white;
+}
+
+.auth-required {
+  color: #f59e0b;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}
+
+.subsection {
+  margin-top: 1rem;
+}
+
+.subsection h4 {
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+pre {
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1rem 0;
+}
+
+code {
+  font-family: 'Monaco', 'Consolas', monospace;
+  font-size: 0.9rem;
+  color: #a5b4fc;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 1rem 0;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .api-docs {
+    padding: 1rem;
+  }
+
+  .api-docs h1 {
+    font-size: 2rem;
+  }
+
+  .api-section {
+    padding: 1.5rem;
+  }
+
+  .endpoint {
+    padding: 1rem;
+  }
+
+  pre {
+    padding: 0.75rem;
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,206 @@
+.dashboard-page {
+  padding: 2rem 1rem;
+}
+
+.dashboard-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-subtitle {
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dashboard-welcome {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.dashboard-welcome h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.stats-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.urls-table-container {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.urls-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.urls-table th,
+.urls-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.urls-table th {
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.urls-table tr:last-child td {
+  border-bottom: none;
+}
+
+.url-code {
+  font-family: monospace;
+  font-weight: 500;
+}
+
+.url-long {
+  max-width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.url-short a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.url-short a:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+.url-clicks {
+  font-weight: 600;
+}
+
+.url-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.copy-btn,
+.delete-btn {
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.copy-btn {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.copy-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+.delete-btn {
+  background-color: rgba(255, 59, 48, 0.8);
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: rgba(255, 59, 48, 1);
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.empty-state-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state-text {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .stats-summary {
+    grid-template-columns: 1fr;
+  }
+  
+  .urls-table th,
+  .urls-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .url-actions {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-title {
+    font-size: 2rem;
+  }
+  
+  .urls-table-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .url-long {
+    max-width: 150px;
+  }
+}

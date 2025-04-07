@@ -1,0 +1,32 @@
+.error-message {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+  background: rgba(255, 56, 96, 0.1);
+  border-radius: var(--border-radius);
+  border-left: 3px solid var(--error-color);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.error-icon {
+  margin-right: 0.75rem;
+  font-size: 1.2rem;
+}
+
+.error-text {
+  color: var(--error-color);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

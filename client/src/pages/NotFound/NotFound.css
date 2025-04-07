@@ -1,0 +1,125 @@
+.not-found-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.not-found-content {
+  text-align: center;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.not-found-title {
+  font-size: 8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1;
+  position: relative;
+  text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+  animation: glitch 3s infinite;
+}
+
+.not-found-subtitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+.not-found-message {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.not-found-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.glitch-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 247, 255, 0.05) 0px,
+    rgba(0, 247, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 10px
+  );
+  opacity: 0.5;
+}
+
+.glitch-effect::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle at center,
+    transparent 30%,
+    rgba(255, 0, 128, 0.1) 70%
+  );
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+    transform: translateX(0);
+  }
+  25% {
+    text-shadow: -2px 0 rgba(255, 0, 128, 0.7), 2px 0 rgba(0, 247, 255, 0.7);
+    transform: translateX(-2px);
+  }
+  50% {
+    text-shadow: 2px 0 rgba(255, 0, 128, 0.7), -2px 0 rgba(0, 247, 255, 0.7);
+    transform: translateX(2px);
+  }
+  75% {
+    text-shadow: -2px 0 rgba(255, 0, 128, 0.7), 2px 0 rgba(0, 247, 255, 0.7);
+    transform: translateX(-2px);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 247, 255, 0.5);
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .not-found-title {
+    font-size: 6rem;
+  }
+  
+  .not-found-subtitle {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .not-found-title {
+    font-size: 4rem;
+  }
+  
+  .not-found-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .not-found-message {
+    font-size: 1rem;
+  }
+}
